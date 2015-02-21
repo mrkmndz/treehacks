@@ -1,4 +1,13 @@
-<h1>test</h1>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <% javascript_include_tag "jquery.maphilight.js" %>
+
+            <script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+    <script>
+        $(function() {
+		    $('.map').maphilight({fade: false});
+        });
+    </script>
+
 <%= form_for :request, url: requests_path do |f| %>
   <p>
     <%= f.label :requester %><br>
@@ -14,4 +23,10 @@
     <%= f.submit %>
   </p>
 <% end %>
-
+         <%= image_tag("floor1.jpg",class:"map", usemap:"#floor"  )%> 
+<map name="floor">
+        <area alt="" title="" href="#" shape="poly" coords="255,244,296,244,298,272,253,273" />
+    <area alt="" title="" href="#" shape="poly" coords="368,244,412,243,412,273,369,274" />
+    <area alt="" title="" href="#" shape="poly" coords="207,328,247,326,248,361,208,358" />
+</body>
+</html>
