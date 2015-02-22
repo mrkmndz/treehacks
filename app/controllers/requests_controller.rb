@@ -11,19 +11,21 @@ class RequestsController < ApplicationController
     def edit
     end
     def create
-        @request = Request.new(params.require(:request).permit(:requester, :email))
+        @request = Request.new(params[:request].permit(:requester,:email)) 
         if @request.save then
-            redirect_to "requests/show"
+            redirect_to(:action => :index)
         else
-            render :action => :new
+           render :action => :new 
         end
     end
     def update
     end
     def destroy
         @request = Request.find(params[:id])
-        @request.destroy
-
-        redirect_to requests_path
+        if @request.destroy then
+            redirect_to(:action => :index)
+        else
+            render :action => :show
+        end
     end
 end
