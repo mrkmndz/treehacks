@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150222015206) do
+ActiveRecord::Schema.define(version: 20150222015734) do
+
+  create_table "requests", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "roomNum"
+    t.string   "requester"
+  end
 
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
