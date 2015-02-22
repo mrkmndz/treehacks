@@ -1,0 +1,23 @@
+<% content_for :title, "Request A Room" %>
+<% content_for :sstate, "active"%>
+<% content_for :rstate, "inactive"%>
+
+<%= form_for(@request, method: :post,
+             url: {action: :create, id: @request.id}) do |f| %>
+            <p>
+        <%= f.label "Your Name" %><br>
+        <%= f.text_field :requester %>
+        </p>
+
+        <p>
+        <%= f.label "Email" %><br>
+        <%= f.text_field :email %>
+        </p>
+
+        <p>
+        <%= f.submit %>
+        </p>
+    <% end %>
+        <p>
+        <%= link_to "Back", {controller: "requests", action: "index"}, id: "fake_button" %>
+        </p>
