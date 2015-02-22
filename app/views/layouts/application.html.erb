@@ -3,12 +3,10 @@
         <title>
             <%= yield(:title) %>
         </title>
-        <%= javascript_include_tag "jquery.js" %> 
         <%= stylesheet_link_tag "bootstrap.min.css" %>
         <%= stylesheet_link_tag "application.css" %>
         <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro" %>
         <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:700,400" %>
-        <%= javascript_include_tag "bootstrap.min.js" %>
         <%= csrf_meta_tags %>
     </head>
     <body>
@@ -28,7 +26,7 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right right-navbar">
-                        <li class="right-navbar"><a class"inactive"
+                        <li class="right-navbar"><a class= "inactive"
                             href= <%= url_for :controller => 'users', :action => 'logout'%>>
                             LOGOUT</a>
                         </li>
@@ -38,7 +36,9 @@
         </nav>
             <%= yield %>
             </div>
-</div>
+        </div>
+        <%= javascript_include_tag "jquery.js" %> 
+        <%= javascript_include_tag "bootstrap.min.js" %>
     </body>
 </html>
 
