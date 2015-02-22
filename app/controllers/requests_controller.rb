@@ -1,4 +1,4 @@
-class RequestsController < ActionController
+class RequestsController < ApplicationController
     def index
         @requests = Request.all
     end
@@ -11,11 +11,12 @@ class RequestsController < ActionController
     def edit
     end
     def create
-        @request = Request.new(params.require(:request).permit(:requester, :room))
-
-        @request.save
-
-        redirect_to requests_path 
+        @request = Request.new(params.require(:request).permit(:requester, :email))
+        if @request.save then
+            redirect_to "requests/show"
+        else
+            render :action => :new
+        end
     end
     def update
     end
