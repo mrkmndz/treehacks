@@ -4,17 +4,17 @@
 
 <%= form_for(@request, method: :post,
              url: {action: :create, id: @request.id}) do |f| %>
-            <p color="black">
+            <p>
         <%= f.label :requester %><br>
         <%= f.text_field :requester %>
         </p>
 
-        <p color="black">
+        <p>
         <%= f.label :email %><br>
         <%= f.text_field :email %>
         </p>
 
-        <p color="black">
+        <p>
         <%= f.submit %>
         </p>
     <% end %>
