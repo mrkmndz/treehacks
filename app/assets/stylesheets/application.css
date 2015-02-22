@@ -19,7 +19,7 @@
   font-family: 'Montserrat' sans-serif !important; 
 }
 #splash {
-  background: url(greenb.jpg) no-repeat 50% 70% fixed; 
+  background: image-url("greenb.jpg") no-repeat 50% 70% fixed; 
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
