@@ -3,8 +3,6 @@
         <title>
             <%= yield(:title) %>
         </title>
-        <%= javascript_include_tag "jquery.js" %>
-        <%= javascript_include_tag "bootstrap.min.js" %>
         <%= stylesheet_link_tag "bootstrap.min.css" %>
         <%= stylesheet_link_tag "application.css" %>
         <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro" %>
@@ -40,5 +38,7 @@
             </div>
         </div>
     </body>
+    <%= javascript_include_tag "jquery.js" %>
+    <%= javascript_include_tag "bootstrap.min.js" %>
 </html>
 
