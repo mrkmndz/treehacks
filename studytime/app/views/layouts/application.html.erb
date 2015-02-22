@@ -16,9 +16,15 @@
         <nav class="navbar navbar-default" role="navigation" id="navbar">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right right-navbar">
-                    <li class="right-navbar"><a class="<%= yield(:rstate) %>" href=<%= url_for :controller => 'requests', :action => 'new'%>>RESERVE</a></li>
-                        <li class="right-navbar"><a class="<%= yield(:sstate) %>"  href=<%= url_for :controller => 'requests', :action => 'index'%> >SCHEDULE</a></li>
+                    <ul class="nav navbar-nav navbar-left left-navbar">
+                        <li class="left-navbar"><a class="<%= yield(:rstate) %>"
+                            href= <%= url_for :controller => 'requests', :action => 'new'%>>
+                            POST</a>
+                        </li>
+                        <li class="left-navbar"><a class="<%= yield(:sstate) %>"  
+                            href=<%= url_for :controller => 'requests', :action => 'index'%> >
+                            BID</a>
+                        </li>
                     </ul>
                 </div>
             </div>
