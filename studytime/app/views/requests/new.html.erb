@@ -1,19 +1,20 @@
-<% @title= "Request a Room" %>
-
+<% content_for :title, "Request A Room" %>
+<% content_for :sstate, "inactive"%>
+<% content_for :rstate, "active"%>
 
 <%= form_for(@request, method: :post,
              url: {action: :create, id: @request.id}) do |f| %>
-            <p>
+            <p color="black">
         <%= f.label :requester %><br>
         <%= f.text_field :requester %>
         </p>
 
-        <p>
+        <p color="black">
         <%= f.label :email %><br>
         <%= f.text_field :email %>
         </p>
 
-        <p>
+        <p color="black">
         <%= f.submit %>
         </p>
     <% end %>

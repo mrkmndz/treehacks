@@ -16,15 +16,13 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right right-navbar">
-                        <li class="right-navbar"><a class="active" href=<%= url_for :controller => 'requests', :action => 'new'%>>RESERVE</a></li>
-                        <li class="right-navbar"><a href=<%= url_for :controller => 'requests', :action => 'index'%> >SCHEDULE</a></li>
+                    <li class="right-navbar"><a class="<%= yield(:rstate) %>" href=<%= url_for :controller => 'requests', :action => 'new'%>>RESERVE</a></li>
+                        <li class="right-navbar"><a class="<%= yield(:sstate) %>"  href=<%= url_for :controller => 'requests', :action => 'index'%> >SCHEDULE</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div id="picframe">
             <%= yield %>
-        </div>
             </div>
 </div>
     </body>

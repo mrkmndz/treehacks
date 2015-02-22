@@ -42,6 +42,15 @@
 	background: #F7F19E;
 }
 
+.new_request input {
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    border: 2px solid #999;
+    border-radius:2px;
+}
+
 div.img {
 	padding: 5%;
 	float: center;

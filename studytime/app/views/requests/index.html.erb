@@ -1,3 +1,8 @@
+<% content_for :title, "Schedule" %>
+<% content_for :sstate, "active"%>
+<% content_for :rstate, "inactive"%>
+
+
 <table>
     <tr>
         <th>Requester</th>
@@ -8,7 +13,6 @@
         <tr>
             <td><%= request.requester %></td>
             <td><%= request.email %></td>
-            <td><%= request.id %></td>
             <td><%= link_to 'Remove', controller: "requests", action: "destroy", id: request.id %></td>
         </tr>
     <% end %>
