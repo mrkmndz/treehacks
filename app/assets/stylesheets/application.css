@@ -1,3 +1,4 @@
+//= depend_on_asset "greenb.jpg"
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -18,7 +19,7 @@
   font-family: 'Montserrat' sans-serif !important; 
 }
 #splash {
-  background: url(green2.jpg) no-repeat 50% 70% fixed; 
+  background: url(greenb.jpg) no-repeat 50% 70% fixed; 
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
