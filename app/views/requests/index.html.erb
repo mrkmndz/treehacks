@@ -2,21 +2,21 @@
 <% content_for :sstate, "active"%>
 <% content_for :rstate, "inactive"%>
 <p>
-<%= link_to "Make New Room Request", {controller: "requests", action: "new"}, id: "fake_button" %>
+<%= link_to "Join the Queue", {controller: "requests", action: "new"}, id: "fake_button" %>
 </p>
 <p>
 <table>
     <tr>
-        <th>Requester</th>
-        <th>email</th>
+        <th>Number</th>
+        <th>Name</th>
     </tr>
-
+    <% i=1 %>
     <% @requests.each do |request| %>
         <tr>
+            <td><%= i %></td>
             <td><%= request.requester %></td>
-            <td><%= request.email %></td>
-            <td><%= link_to 'Remove', controller: "requests", action: "destroy", id: request.id %></td>
         </tr>
+        <%i=i+1%>
     <% end %>
 </table>
 </p>

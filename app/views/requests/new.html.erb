@@ -1,6 +1,6 @@
 <% content_for :title, "Request A Room" %>
-<% content_for :sstate, "inactive"%>
-<% content_for :rstate, "active"%>
+<% content_for :sstate, "active"%>
+<% content_for :rstate, "inactive"%>
 
 <%= form_for(@request, method: :post,
              url: {action: :create, id: @request.id}) do |f| %>

@@ -1,23 +1,42 @@
 <% content_for :title, "Schedule" %>
-<% content_for :sstate, "active"%>
-<% content_for :rstate, "inactive"%>
-<p>
-<%= link_to "Make New Room Request", {controller: "requests", action: "new"}, id: "fake_button" %>
-</p>
-<p>
-<table>
-    <tr>
-        <th>Requester</th>
-        <th>email</th>
-    </tr>
+<% content_for :sstate, "inactive"%>
+<% content_for :rstate, "active"%>
+ <% content_for :scripts do %>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('img').mapster({
+        strokeWidth: 2,
+		stroke:true,
+		strokeColor: '5CD65C',
+        selected:true,
+        isDeselectable:false,
+        fill:false,
+        clickNavigate: true,
+        render_highlight: {
+            strokeWidth: 5,
+            strokeColor: '000000'
+        }
+	});
+});
+</script>     
+ <% end %>
 
-    <% @requests.each do |request| %>
-        <tr>
-            <td><%= request.requester %></td>
-            <td><%= request.email %></td>
-            <td><%= link_to 'Remove', controller: "requests", action: "destroy", id: request.id %></td>
-        </tr>
-    <% end %>
-</table>
-</p>
+<map name="shapes_Map">
+    <area shape="rect" href="<%= url_for action: "new" ,id: "0"%>" group="rectangle" alt="" coords="352,359,440,422" />
+    <area shape="rect" group="rectangle" alt="" href="<%= url_for action: "new",id: "1"%>" coords="590,359,684,423"/>
+    <area shape="rect" group="rectangle" alt="" href="<%= url_for action: "new",id: "2"%>" coords="253,534,342,605"/>
+    </map>
+<map name="shapes_Map2">
+    <area shape="rect" group="rectangle" alt="" href="<%= url_for action: "new",id: "3"%>"coords="681,427,793,502" href="#"/>
+    <area shape="rect" group="rectangle" alt="" href="<%= url_for action: "new",id: "4"%>" coords="297,618,409,693" href="#"/>
+</map>
+<div class="container">
+    <div class="fake_img">
+        <img src=<%= image_path("floor1.jpg") %> height="500px" border="0" alt="" usemap="#shapes_Map">
+    </div>
+    <div class="fake_img">
+        <img src=<%= image_path("floor2.jpg") %> height="500px" border="0" alt="" usemap="#shapes_Map2">
+    </div>
+</div>
+
 
