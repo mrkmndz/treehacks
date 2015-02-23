@@ -1,0 +1,23 @@
+<% content_for :title, "Schedule" %>
+<% content_for :sstate, "active"%>
+<% content_for :rstate, "inactive"%>
+<p>
+<%= link_to "Make New Room Request", {controller: "requests", action: "new"}, id: "fake_button" %>
+</p>
+<p>
+<table>
+    <tr>
+        <th>Requester</th>
+        <th>email</th>
+    </tr>
+
+    <% @requests.each do |request| %>
+        <tr>
+            <td><%= request.requester %></td>
+            <td><%= request.email %></td>
+            <td><%= link_to 'Remove', controller: "requests", action: "destroy", id: request.id %></td>
+        </tr>
+    <% end %>
+</table>
+</p>
+
