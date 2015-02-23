@@ -9,10 +9,19 @@ $(document).ready(function() {
 
 <map name="shapes_Map">
     <area shape="rect" group="rectangle" alt="" href="#"coords="519,466,608,528" />
-    <area shape="rect" group="rectangle" alt="" href="#" coords=758,463,848,526" />
+    <area shape="rect" group="rectangle" alt="" href="#" coords="758,463,848,526" />
     <area shape="rect" group="rectangle" alt="" href="#" coords="423,640,509,712" />
     </map>
-    <p>
-    <img src=<%= image_path("floor1.jpg") %> width="600px" border="0" alt="" usemap="#shapes_Map" align= "middle">
-    </p>
+<map name="shapes_Map2">
+    <area shape="rect" group="rectangle" alt="" href="#"coords="779,528,890,599" />
+    <area shape="rect" group="rectangle" alt="" href="#" coords="394,717,505,793" />
+</map>
+<div class="container">
+    <div class="fake_img">
+        <img src=<%= image_path("floor1.jpg") %> height="500px" border="0" alt="" usemap="#shapes_Map">
+    </div>
+    <div class="fake_img">
+        <img src=<%= image_path("floor2.jpg") %> height="500px" border="0" alt="" usemap="#shapes_Map2">
+    </div>
+</div>
 

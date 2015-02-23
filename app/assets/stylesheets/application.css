@@ -37,13 +37,14 @@
 	background-color: rgba(0,0,0,0.4);
 }
 
-#picframe {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	height: 69%;
-	width: 80%;
-	background: #F7F19E;
+.container{
+    text-align:center;
+}
+
+.fake_img{
+    display:inline-block;
+    margin:5px 20px;
+    padding:5px;
 }
 
 .new_request input {
