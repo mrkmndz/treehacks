@@ -1,22 +1,18 @@
-<script type=https://raw.githubusercontent.com/jamietre/ImageMapster/e08cd7ec24ffa9e6cbe628a98e8f14cac226a258/dist/jquery.imagemapster.js></script>
-
-    <img style="width:400px;height:400px;border:0;" id="shape1" src=<%=image_path("floor1.jpg")%> alt="shape1" usemap="#Map1">
-
-<script type="text/javscript">
-$(document).ready(function ()
-{
-	$('#shape1').mapster({
-    	singleSelect : false,
-	render_highlight : { altImage : <%=image_path("greenb.jpg")%> },
-     mapKey: 'color',
-    fill : true,
-    fillOpacity : 1,
+ <% content_for :scripts do %>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('img').mapster({
+	});
 });
-});
-</script>
-<map name="Map1" id="Map1">
-    <area alt="" title="" href="#" shape="poly" coords="519,462,609,464,609,527,519,527" />
-    <area alt="" title="" href="#" shape="poly" coords="421,640,510,640,509,711,421,710" />
-    <area alt="" title="" href="#" shape="poly" coords="760,466,851,465,852,529,760,526" />
+</script>     
+ <% end %>
+
+<map name="shapes_Map">
+    <area shape="rect" group="rectangle" alt="" href="#"coords="519,466,608,528" />
+    <area shape="rect" group="rectangle" alt="" href="#" coords=758,463,848,526" />
+    <area shape="rect" group="rectangle" alt="" href="#" coords="423,640,509,712" />
     </map>
+    <p>
+    <img src=<%= image_path("floor1.jpg") %> width="600px" border="0" alt="" usemap="#shapes_Map" align= "middle">
+    </p>
 

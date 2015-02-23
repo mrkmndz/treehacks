@@ -8,6 +8,16 @@
         <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:700,400" %>
         <%= javascript_include_tag "jquery.js" %>
         <%= javascript_include_tag "bootstrap.min.js" %>
+        <%= javascript_include_tag "when.js" %>
+        <%= javascript_include_tag "core.js" %>
+        <%= javascript_include_tag "graphics.js" %>
+        <%= javascript_include_tag "mapimage.js" %>
+        <%= javascript_include_tag "mapdata.js" %>
+        <%= javascript_include_tag "areadata.js" %>
+        <%= javascript_include_tag "areacorners.js" %>
+        <%= javascript_include_tag "scale.js" %>
+        <%= javascript_include_tag "tooltip.js" %>        
+        <%= yield(:scripts) %>
         <%= csrf_meta_tags %>
     </head>
     <body>
