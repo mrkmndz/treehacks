@@ -2,5 +2,5 @@
 <% content_for :sstate, "active"%>
 <% content_for :rstate, "inactive"%>
 
-<%= button_to "Confirm", method: :post,controller: "requests",action: :create%>
+<%= button_to "Confirm", {method: :post,controller: "requests",action: :create}, class: "big_button"%>
         <%= link_to "Back", {controller: "requests", action: "index"}, id: "fake_button" %>

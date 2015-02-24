@@ -1,6 +1,6 @@
 <% content_for :sstate, "inactive"%>
 <% content_for :rstate, "active"%>
 
-<%= button_to "Confirm", method: :post,action: :create, id: @roomNum%>
+<%= button_to "Confirm", {method: :post,action: :create, id: @roomNum} ,class: "big_button"%>
         <%= link_to "Back", {controller: "offer", action: "index"}, id: "fake_button" %>
 
