@@ -2,8 +2,8 @@ class OfferController < ApplicationController
     def index
     end
     def new
-        @offer = Request.new
-        @offer.roomNum = 1
+        offer = Offer.new
+        offer.roomNum = 1
     end
     def create
         @offer = Request.new(params[:request].permit(:room,:offerer)) 
