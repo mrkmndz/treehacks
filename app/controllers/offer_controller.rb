@@ -1,4 +1,5 @@
 class OfferController < ApplicationController
+    before_action :require_login
     def index
     end
     def new

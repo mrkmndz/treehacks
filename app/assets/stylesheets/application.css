@@ -18,6 +18,22 @@
 {
   font-family: 'Montserrat' sans-serif !important; 
 }
+#clearance {
+   display: inline-block;
+}
+.text-field{
+    color:black
+}
+label{
+    color:white
+}
+.fake_link {
+    background:none!important;
+     border:none; 
+     padding:0!important;
+     cursor: pointer;
+     color: white;
+}
 #splash {
   background: url(greenb.jpg) no-repeat 50% 70% fixed; 
   background-size: cover;
@@ -35,6 +51,7 @@
 	height: 87%;
 	width: 80%;
 	background-color: rgba(0,0,0,0.4);
+    text-align: center;
 }
 
 .container{
@@ -283,8 +300,7 @@ h2,h3 {
 	color:white;
 	text-align: center;
 	font-size: 4em;
-	position: relative;
-	top: 1em;
+		top: 1em;
 }
 
 h4 {

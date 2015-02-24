@@ -6,6 +6,7 @@
         <%= stylesheet_link_tag "application.css" %>
         <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro" %>
         <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:700,400" %>
+        <%= javascript_include_tag "jquery_ujs.js" %>
         <%= javascript_include_tag "jquery.js" %>
         <%= javascript_include_tag "bootstrap.min.js" %>
         <%= javascript_include_tag "when.js" %>
@@ -32,6 +33,7 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left left-navbar">
+                        <% if signed_in? %>
                         <li class="left-navbar"><a class="<%= yield(:rstate) %>"
                             href= <%= url_for :controller => '/offer', :action => 'index'%>>
                             POST</a>
@@ -40,22 +42,14 @@
                             href=<%= url_for :controller => '/requests', :action => 'index'%> >
                             BID</a>
                         </li>
+                    <% end %>
                     </ul>
                     <ul class="nav navbar-nav navbar-right right-navbar">
-                        <li class="right-navbar"><a class= "inactive" href=   
                         <% if signed_in? %>
-                            <%= url_for sign_out_path, method: :delete %>
-                    <% else %>
-                             <%= url_for sign_in_path %>
-                         <% end %>
-                         >
-                         <% if signed_in? %>
-                             LOGOUT
-                     <%else %>
-                             LOGIN
-                        <%end%>
-                            </a>
-                        </li>
+                        <li class="right-navbar"> 
+                        <%= button_to "LOG OUT", sign_out_path, method: :delete , class: "fake_link"%>
+                           </li>
+                        <% end %>
                      </ul>
                 </div>
             </div>
