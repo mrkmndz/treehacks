@@ -1,10 +1,8 @@
 <% content_for :title, "Schedule" %>
 <% content_for :sstate, "active"%>
 <% content_for :rstate, "inactive"%>
-<p>
 <%= link_to "Join the Queue", {controller: "requests", action: "new"}, id: "fake_button" %>
-</p>
-<p>
+<br>
 <table>
     <tr>
         <th>Number</th>
@@ -19,5 +17,4 @@
         <%i=i+1%>
     <% end %>
 </table>
-</p>
 
