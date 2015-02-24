@@ -40,18 +40,20 @@ label{
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  height: 140%;
+  height: 100%;
+  overflow:scroll
 }
 
 #graybox {
-	position: relative;
-	margin-left: auto;
+    margin-top:3em;
+    margin-left: auto;
 	margin-right: auto;
-	top: 3em;
-	height: 87%;
+    min-height: 80%;
 	width: 80%;
 	background-color: rgba(0,0,0,0.4);
     text-align: center;
+    overflow-x: hidden;
+    margin-bottom:3em;
 }
 
 .container{
@@ -90,6 +92,7 @@ table {
     width: 80%;
         margin-left:auto; 
     margin-right:auto;
+    margin-bottom:3em;
 }
 
 th, td {

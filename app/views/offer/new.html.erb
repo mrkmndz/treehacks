@@ -2,7 +2,5 @@
 <% content_for :rstate, "active"%>
 
 <%= button_to "Confirm", method: :post,action: :create, id: @roomNum%>
-        <p>
-        <%= link_to "Back", {controller: "offers", action: "index"}, id: "fake_button" %>
-        </p>
+        <%= link_to "Back", {controller: "offer", action: "index"}, id: "fake_button" %>
 
