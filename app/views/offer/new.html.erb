@@ -1,17 +1,7 @@
 <% content_for :sstate, "inactive"%>
 <% content_for :rstate, "active"%>
 
-<%= form_for(@offer, method: :post,
-             url: {action: :create, id: @offer.id}) do |f| %>
-            <p>
-        <%= f.label "Your Name" %><br>
-        <%= f.text_field :offerer %>
-        </p>
-
-        <p>
-        <%= f.submit %>
-        </p>
-    <% end %>
+<%= button_to "Confirm", method: :post,action: :create, id: @roomNum%>
         <p>
         <%= link_to "Back", {controller: "offers", action: "index"}, id: "fake_button" %>
         </p>

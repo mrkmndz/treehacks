@@ -4,10 +4,10 @@ class RequestsController < ApplicationController
         @requests = Request.all
     end
     def new
-        @request = Request.new
     end
     def create
-        @request = Request.new(params[:request].permit(:requester,:email)) 
+        @request = Request.new() 
+        @request.requester = current_user.email
         if @request.save then
             redirect_to(:action => :index)
         else
