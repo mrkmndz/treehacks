@@ -21,6 +21,11 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
+    <div id="flash">
+    <% flash.each do |key, value| -%>
+      <div id="flash_<%= key %>"><%=h value %></div>
+    <% end %>
+  </div>
     <div id="splash">
     <div id="graybox">
         <nav class="navbar navbar-default" role="navigation" id="navbar">
@@ -28,21 +33,27 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left left-navbar">
                         <li class="left-navbar"><a class="<%= yield(:rstate) %>"
-                            href= <%= url_for :controller => 'offer', :action => 'index'%>>
+                            href= <%= url_for :controller => '/offer', :action => 'index'%>>
                             POST</a>
                         </li>
                         <li class="left-navbar"><a class="<%= yield(:sstate) %>"  
-                            href=<%= url_for :controller => 'requests', :action => 'index'%> >
+                            href=<%= url_for :controller => '/requests', :action => 'index'%> >
                             BID</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right right-navbar">
-                        <li class="right-navbar"><a class= "inactive">   
+                        <li class="right-navbar"><a class= "inactive" href=   
                         <% if signed_in? %>
-                            <%= link_to 'LOGOUT', sign_out_path, method: :delete %>
-                            <% else %>
-                            <%= link_to 'LOGIN', sign_in_path %>
-                            <% end %>
+                            <%= url_for sign_out_path, method: :delete %>
+                    <% else %>
+                             <%= url_for sign_in_path %>
+                         <% end %>
+                         >
+                         <% if signed_in? %>
+                             LOGOUT
+                     <%else %>
+                             LOGIN
+                        <%end%>
                             </a>
                         </li>
                      </ul>
@@ -54,4 +65,3 @@
         </div>
     </body>
 </html>
-
