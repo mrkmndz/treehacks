@@ -37,9 +37,13 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right right-navbar">
-                        <li class="right-navbar"><a class= "inactive"
-                            href= <%= url_for :controller => 'users', :action => 'logout'%>>
-                            LOGOUT</a>
+                        <li class="right-navbar"><a class= "inactive">   
+                        <% if signed_in? %>
+                            <%= link_to 'LOGOUT', sign_out_path, method: :delete %>
+                            <% else %>
+                            <%= link_to 'LOGIN', sign_in_path %>
+                            <% end %>
+                            </a>
                         </li>
                      </ul>
                 </div>

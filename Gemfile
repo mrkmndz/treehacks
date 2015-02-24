@@ -32,6 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #   # Enable ActiveRecord session store
 gem 'activerecord-session_store'
 
+gem 'clearance'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
